@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Daily UI  #016 |  Pop-Up / Overlay</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-close  {
+  padding: 20px 50px;
+  display: inline-block;
+  background: #ED145B;
+  color: white;
+  text-decoration: none;
+  transition: 0.35s ease-in-out;
+  font-weight: 700;
+}
+.btn-close:hover {
+  background: #ED145B;
+}
+
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal-video {
+  text-align: center;
+  padding: 40px 80px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay .modal-video.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal-video.open .content {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+.overlay .modal-video .content {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay .modal-video .title {
+  margin-top: 0;
+}
+
+  </style>
+      
+  
+</head>
+
+<body>
+  <a href="#" class='open-modal' data-modal="#modal1"><img src="https://cdn1.savepice.ru/uploads/2019/3/11/b69b24d166df01c76409d151298e8ae0-full.png" alt=""></a>
+
+<div class='modal-video' id='modal1'>
+	<div class='content'>
+		<p>
+				
+     <iframe width="640" height="480" src="https://www.youtube.com/embed/AOS8Jxa5mso" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</p>
+		<a class='btn-close close-modal' data-modal="#modal1" href="#">Закрыть</a>
+	</div>	
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <script>
+      $(".modal-video").each( function(){
+  $(this).wrap('<div class="overlay"></div>')
+});
+
+$(".open-modal").on('click', function(e){
+  e.preventDefault();
+  e.stopImmediatePropagation;
+  
+  var $this = $(this),
+      modal = $($this).data("modal");
+  
+  $(modal).parents(".overlay").addClass("open");
+  setTimeout( function(){
+    $(modal).addClass("open");
+  }, 350);
+  
+  $(document).on('click', function(e){
+    var target = $(e.target);
+    
+    if ($(target).hasClass("overlay")){
+      $(target).find(".modal-video").each( function(){
+        $(this).removeClass("open");
+      });
+      setTimeout( function(){
+        $(target).removeClass("open");
+      }, 350);
+    }
+    
+  });
+  
+});
+
+$(".close-modal").on('click', function(e){
+  e.preventDefault();
+  e.stopImmediatePropagation;
+  
+  var $this = $(this),
+      modal = $($this).data("modal");
+  
+  $(modal).removeClass("open");
+  setTimeout( function(){ 
+    $(modal).parents(".overlay").removeClass("open");
+  }, 350);
+  
+});
+  
+    </script>
+
+</body>
+</html>

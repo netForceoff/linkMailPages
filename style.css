@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Hanalei+Fill|Kirang+Haerang|Oswald');
+	* {
+		margin: 0;
+		padding: 0;
+		font-family: 'Roboto', sans-serif;
+	}
+
+		.container {
+			width: 600px;
+			margin: 0 auto;
+			justify-content: center;
+		}
+
+		header {
+			box-sizing: border-box;
+			line-height: 35px;
+		}
+
+		header ul {
+			display: flex;
+			justify-content: space-between;
+			list-style-type: none
+		}
+
+		header ul li, footer ul li {
+			margin: 0 20px;
+		}
+
+		header ul li:last-child {
+			line-height: 55px;
+		}
+
+		header ul li img {
+			margin-top: 10px;
+		}
+
+		header ul li:last-child {
+			font-weight: bold;
+		}
+
+		.block-slang {
+			background: #F0F7FD;
+			text-align: center;
+		}
+
+		.block-slang:first-of-type {
+			font-size: 17px;
+			font-weight: 600;
+		}
+
+		.block-slang:last-of-type {
+			font-size: 14px;
+		}
+
+		.text, .header_text {
+			padding: 25px 0px 25px 0px;
+			line-height: 20px;
+			
+		}
+
+		.text {
+			font-size: 12px;
+		}
+
+		.img-office {
+			text-align: center;
+		}
+
+		.img-office img {
+			width: 93%;
+		}
+
+		.header-p {
+			padding-top: 10px;
+			margin-bottom: 15px;
+			font-weight: bolder;
+		}
+
+		main {
+			text-align: center;
+		}
+
+		.text-main p{
+			font-weight: bolder;
+		}
+
+		.text-main {
+			margin: 10px 0px 15px 0px;
+		}
+
+		.card_item {
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+			padding: 15px;
+			box-sizing: border-box;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.card-block {
+			justify-content: space-around;
+			display: flex;
+			margin-top: 30px;
+			box-sizing: border-box;
+			text-align: center;
+		}
+
+		.card_item button {
+			width: 154px;
+			height: 35px;
+			background: #FE0A29;
+			border: none;
+			color: white;
+			border-radius: 5px;
+		}
+
+		.card_item p {
+			font-size: 12px;
+			margin-bottom: 5px;
+		}
+
+		.card_item img {
+			width: 150px;
+			height: 150px;
+
+		}
+
+		.triangle {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			width: 41px;
+			height: 50px;
+			background-color: #FFE11E;
+		}
+
+		.triangle::before {
+			content: ' ';
+		    display: block;
+		    position: absolute;
+		    height: 50px;
+		    width: 41px;
+		    background-color: #fff;
+		    right: 0px;
+		    top: 1px;
+		    -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+		    shape-outside: polygon(50% 50%, 100% 50%, 0 50%);
+		    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+		    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+
+		}
+
+		.triangle p {
+			position: absolute;
+			top: 6px;
+			left: 10px;
+			right: 0px;
+			-webkit-transform: rotate(45deg);
+			        transform: rotate(45deg);
+			font-weight: bold;
+			font-size: 13px;
+			letter-spacing: 1px;
+		}
+
+		.rectangle {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			width: 80px;
+			height: 20px;
+			line-height: 20px;
+			background-color: #FFE11E;
+			font-weight: bold;
+			border-radius: 2px;
+		}
+
+		.item_1 {
+			padding: 15px 9px;
+		}
+
+		.block-recomendation {
+			display: flex;
+			justify-content: center;
+		}
+
+		.block_req_item {
+			margin: 7px 10px;
+			background: #F5F4F4;
+			width: 197px;
+			height: 111px;
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+			padding: 15px 10px;
+			box-sizing: border-box;		}
+
+		.block_req_item p {
+			font-size: 11px;
+			margin: 7px 0;
+		}
+
+		.item_help {
+			padding-top: 22px;
+		}
+
+		.answers {
+
+			margin-top: 15px;
+		}
+
+		.answers p {
+			font-weight: bold;
+			line-height: 20px;
+			font-size: 10px;
+		}
+
+		.block-phones {
+			background: #FEE01E;
+			width: 344px;
+			height: 86px;
+			margin: 5px auto 0px auto;
+			line-height: 30px;
+			box-sizing: border-box;
+			padding-top: 13px;
+			font-size: 16px;
+		}
+
+		.phone_1 {
+			display: flex;
+			justify-content: center;
+		}
+
+		.phone_1:last-child {
+			margin-top: -5px;
+		}
+
+		.img_phone {
+			margin-top: 2px;
+		}
+
+
+		.phone_1 span {
+			font-weight: bold;
+		}
+
+		.answers button {
+			background: #0A84FE;
+			width: 190px;
+			height: 35px;
+			border: none;
+			color: white;
+			border-radius: 2px;
+			cursor: pointer;
+			margin-top: 5px;
+		}
+
+		.footnote {
+			height: 52px;
+			line-height: 52px;
+			background: #F5F4F4;
+			margin-top: 15px;
+			color: #8C8C8C;
+			font-size: 10px;
+			text-align: left;
+			padding-left: 20px; 
+			box-sizing: border-box;
+		}
+
+		footer {
+			height: 52px;
+			background: #FE0A29;
+			box-sizing: border-box;
+		}
+
+		footer ul {
+			display: flex;
+			list-style-type: none;
+			justify-content: space-between;
+			color: white;
+		}
+
+		 footer ul img {
+		 	margin-top: 12px;
+		 }
+
+		footer ul li:last-child {
+			line-height: 52px;
+		}
+
+		footer ul li {
+			font-size: 13px;
+		}
+
+		@media screen and (min-width: 481px) and (max-width: 590px) {
+			.container {
+				width: 100%;
+			}
+
+			.card-block {
+				display: inline-block;
+			}
+
+			.card_item {
+				margin: 10px;
+			}
+		}
+
+		@media screen and (min-width: 415px) and (max-width: 480px) {
+			.container {
+				width: 100%;
+			}
+
+			.triangle::before {
+				right: 1px;
+			}
+
+			.card-block {
+				display: inline-block;
+			}
+
+			.card_item {
+				margin: 10px;
+			}
+		}
+
+		@media screen and (min-width: 376px) and (max-width: 414px) {
+			.container {
+				width: 100%;
+			}
+
+			.card-block {
+				display: inline-block;
+			}
+
+			.card_item {
+				margin: 10px 5px 5px 10px;
+			}
+
+			.footnote {
+				white-space: pre-line;
+				line-height: 13px;
+			}
+
+			.triangle::before {
+				right: 1px;
+			}
+		}
+
+		@media screen and (min-width: 321px) and (max-width: 375px) {
+			.container {
+				width: 100%;
+			}
+
+			.card-block {
+				display: inline-block;
+			}
+
+			.card-block:last-of-type {
+				margin-top: -15px;
+			}
+
+			.card_item {
+				margin: 5px 10px 10px 5px;
+			}
+
+			.block-recomendation {
+				display: inline-block;
+				margin-bottom: -10px;
+			}
+
+			.text-main {
+				padding: 0px 5px;
+			}
+
+			.block_req_item {
+				margin: 10px 0px;
+			}
+
+			.triangle::before {
+				right: 1px;
+			}
+
+			.answers {
+				padding: 0 6px;
+				word-wrap: break-word;
+			}
+
+			.text {
+				padding: 25px 5px;
+			}
+
+			.footnote {
+				white-space: pre-line;
+				line-height: 13px;
+			}
+		}
+
+		@media screen and (max-width: 320px) {
+			.container {
+				width: 103%;
+			}
+
+			.card-block {
+				display: inline-block;
+			}
+
+			.card_item {
+				margin: 5px 10px 10px 5px;
+			}
+
+			.triangle::before {
+				right: 1px;
+			}
+
+			.text-main {
+				padding-right: 5px;
+			}
+
+			.block-recomendation {
+				display: inline-block;
+				margin-bottom: -5px;
+			}
+
+			.block_req_item {
+				margin-top: 15px;
+			}
+			
+			.footnote {
+				white-space: pre-line;
+				line-height: 13px;
+				padding-right: 5px;
+			}
+
+		}
